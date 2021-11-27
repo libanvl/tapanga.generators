@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\ssh.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ssh.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Tapanga.CommandLine" Version="2.0.4-alpha-g5476cb1b89" />
+  </ItemGroup>
+
+</Project>
