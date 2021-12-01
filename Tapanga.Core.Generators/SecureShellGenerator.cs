@@ -10,6 +10,13 @@ namespace Tapanga.Core.Generators;
 [Description("Generates SSH connection profiles.")]
 public class SecureShellGenerator : DelegateGenerator<SecureShellGenerator.Arguments>
 {
+    private readonly GeneratorContext _context;
+
+    public SecureShellGenerator(GeneratorContext generatorContext)
+    {
+        _context = generatorContext;
+    }
+
     public class Arguments : CommonArguments
     {
         [UserArgument("Path to the SSH client", ShortName = "s", IsRequired = true)]
@@ -67,6 +74,8 @@ public class SecureShellGenerator : DelegateGenerator<SecureShellGenerator.Argum
             args.StartingDirectory.WrapOpt(),
             args.ProfileTitle.WrapOpt(whitespaceIsNone: true),
             icon);
+
+        _context.Logger.Log(LogLevel.Information, profile.CommandLine);
 
         profiles.Add(profile);
 

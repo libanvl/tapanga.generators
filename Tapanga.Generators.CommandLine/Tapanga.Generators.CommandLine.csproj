@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tapanga.Core.Generators\Tapanga.Core.Generators.csproj" />
+    <ProjectReference Include="..\Tapanga.Core.Generators\Tapanga.Generators.csproj" />
   </ItemGroup>
 
 </Project>
